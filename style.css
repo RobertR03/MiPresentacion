@@ -10,7 +10,12 @@ body{
     float: left;
     display: block;
 }
-
+h2{
+    text-align: center;
+}
+marquee{
+    color: yellow;
+}
 @media only screen and (max-width: 4000px){
     header{
         width:99.5%;
