@@ -1,0 +1,213 @@
+body{
+    background-color: #161b22;
+    align-items: center;
+}
+
+#icono-pag{
+    width: 59%;
+    height: 100%;
+    text-align:right;
+    float: left;
+    display: block;
+}
+
+@media only screen and (max-width: 4000px){
+    header{
+        width:99.5%;
+        height: auto;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        padding-top: 0.5%;
+        padding-bottom:0.5% ;
+        margin: auto;
+        position:fixed;
+        background-color: #161b22;
+        z-index: 2;
+        border-radius: 5px;
+        box-shadow: 0px 1.4px 1.4px seashell;
+    }
+    .enlaces{
+        text-decoration: none;
+        color: #00aaff;
+        text-shadow: 1px 1px 1px #FFFFFF;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 27pt;
+    }
+    #redes{
+        width: 41%;
+        height: 100%;
+        float: left;
+        display: block;
+        text-align: center;
+        padding-top: 0.5%;
+    }
+    
+    #gith{
+        border-radius: 12px;
+        transition: 300ms;
+    }
+    
+    #contenedor{
+        width: 97%;
+        height: 99%;
+        padding-top: 4%;
+        padding-right: 1%;
+        padding-left: 1%;
+        background-color: #161b22;
+        left: 0%;
+        right: 0%;
+        margin: auto;
+        position:absolute;
+        border-radius: 7px;
+        color: seashell;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 14pt;
+    }
+    #arriba{
+        height: 50.5%;
+        width: 100%;
+        float: left;
+        display: block;
+        top: 1%;
+        left: 0%;
+        bottom: 1%;
+        right: 0%;
+    }
+    p{
+        font-size: 16pt;
+        text-align:left;
+    }
+    .div-imagen{
+        height: 90%;
+        width: 19%;
+        float: left;
+        display: block;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        margin-right: 1.5%;
+        position: relative;
+        overflow: hidden;
+    }
+    .imagen{
+        height:auto;
+        width: 100%;
+    }
+       
+}
+
+@media only screen and (max-width: 823px){
+    .enlaces{
+        font-size: 23pt;
+    }
+    header{
+        height: auto;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        right: 0%;
+        left: 0%;
+    }
+    #contenedor{
+        top: 7%;
+        left: 0%;
+        right: 0%;
+    }
+    #redes{
+        padding-top:0.5%;
+    }
+
+    #arriba{
+        height: 55%;
+        top: 0%;
+        overflow: auto;
+    }
+    .div-imagen{
+        height: 84.5%;
+        width: 20%;
+        position: relative;
+        margin-right: 2%;
+    }
+    p{
+        font-size: 10pt;
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 570px){
+    #arriba{
+        overflow: auto;
+    }
+    p{
+        font-size: 8pt;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    header{
+        height:7%;
+    }
+    
+    #arriba{
+        height: 60%;
+    }
+    .div-imagen{
+        height: 42%;
+        width: 35%;
+    }
+    p{
+        font-size: 13pt;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+    }
+}    
+
+@media only screen and (max-width: 411px){
+    header{
+        height:6.5%;
+    }
+    .div-imagen{
+        height: auto;
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .enlaces{
+        font-size: 20pt;
+    }
+    header{
+        height: 7%;
+    }
+    #contenedor{
+        top: 7%;
+    }
+    #arriba{
+        height: 75%;
+        top: 0.4%;
+        overflow: auto;
+    }
+    .div-imagen{
+        float: left;
+        display: block;
+        height: 40%;
+        width: 42%;
+        overflow: hidden;
+        margin-bottom: 0%;
+        margin-right: 1.7%;
+    }
+    p{
+        font-size: 13pt;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+    }
+    @media only screen and (max-width: 280px){
+        .enlaces{
+            font-size: 18pt;
+        }
+        .div-imagen{
+            width: 45%;
+            height: auto;   
+        }
+
+    }
+}
