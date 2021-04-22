@@ -112,7 +112,7 @@ marquee{
     }
     
     .paginas{
-        height: 90%;
+        height: auto;
         width: 30%;
         float: left;
         display: block;
@@ -130,6 +130,13 @@ marquee{
         margin-bottom: 1%;
         text-align: center;
         font-size: 18pt;
+    }
+}
+
+@media only screen and (max-width: 1027px){
+    #arriba{
+        height: 29%;
+        overflow: auto;
     }
 }
 
@@ -175,13 +182,10 @@ marquee{
 
 @media only screen and (max-width: 770px){
     #arriba{
-        height: 24%;
+        height: 55%;
     }
     .paginas{
-        height:37%;
-    }
-    #arriba{
-        margin-top: -4%;
+        width: 27%;
     }
 }
 @media only screen and (max-width: 570px){
@@ -192,7 +196,6 @@ marquee{
         font-size: 8pt;
     }
     .paginas{
-        height: 47%;
         width: 40%;
     }
 }
@@ -216,7 +219,6 @@ marquee{
     }
     
     .paginas{
-        height: 47%;
         width: 47%;
     }
 }    
@@ -260,9 +262,6 @@ marquee{
         font-family: 'Times New Roman', Times, serif;
         text-align: left;
     }
-    .paginas{
-        height: 40%;
-    }
 }
 @media only screen and (max-width: 360px){
     #arriba{
@@ -283,7 +282,6 @@ marquee{
     .paginas{
         margin: auto;
         float: none;
-        height: 60%;
         width: 87%;
     }
 }
