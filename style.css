@@ -81,7 +81,7 @@ marquee{
     }
 
     #arriba{
-        height: 34%;
+        height: 50%;
         width: 100%;
         float: left;
         display: block;
@@ -112,7 +112,7 @@ marquee{
     }
     
     .paginas{
-        height: 60%;
+        height: 90%;
         width: 30%;
         float: left;
         display: block;
