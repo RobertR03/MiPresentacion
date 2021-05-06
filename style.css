@@ -89,6 +89,7 @@ marquee{
         left: 0%;
         bottom: 1%;
         right: 0%;
+        overflow: auto;
     }
     p{
         font-size: 18pt;
