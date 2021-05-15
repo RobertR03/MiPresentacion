@@ -121,6 +121,8 @@ marquee{
         border-radius: 3px;
         border: 1px solid #ccc;
         transition: 300ms;
+        margin: 1% 1% 1% 1%
+
     }
     .paginas:hover{
         border: 1px solid #eeee00;
