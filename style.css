@@ -20,6 +20,7 @@ marquee{
     width: 100%;
     height: max-content;
     overflow: hidden;
+    text-align: center;
 }
 .paginas IMG{
     width: 100%;
@@ -115,13 +116,14 @@ marquee{
     .paginas{
         height: max-content;
         width: 30%;
-        float: left;
-        display: block;
+        display: inline-block;
         overflow: hidden;
         border-radius: 3px;
         border: 1px solid #ccc;
         transition: 300ms;
-        margin: 1% 1% 1% 1%
+        margin: auto;
+        position: relative;
+        margin: 1% 1% 1% 1%;
 
     }
     .paginas:hover{
