@@ -26,6 +26,43 @@ marquee{
     width: 100%;
     height: auto;
 }
+nav{
+    width: 20%;
+    position: fixed;
+    float: left;
+    z-index: 2;
+    top: 90px;
+    font-size: 14pt;
+    border: 2px solid #cfcfcf;
+    border-radius: 13px;
+    background-color: #161b22;
+    left: -18%;
+    padding:1% 0% 1% 0%;
+    transition: 300ms;
+}
+nav:hover{
+    left: -1%;
+    border: 2px solid #eeee00;
+    padding-left: 2%;
+}
+#curriculum{
+    width: 94%;
+    height: 100%;
+    float: left;
+    display: block;
+    text-align: left;
+    color: #FFFFFF;
+}
+#flecha{
+    display:inline-block;
+    width: 4%;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: right;
+}
+nav a{
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 4000px){
     header{
@@ -147,6 +184,9 @@ marquee{
         height: 29%;
         overflow: auto;
     }
+    nav{
+        top: 55px;
+    }
 }
 
 @media only screen and (max-width: 823px){
@@ -159,6 +199,10 @@ marquee{
         padding-bottom: 0.5%;
         right: 0%;
         left: 0%;
+    }
+    nav{
+        top: 38px;
+        font-size: 10pt;
     }
     #contenedor{
         top: 7%;
@@ -196,10 +240,23 @@ marquee{
     .paginas{
         width: 27%;
     }
+    nav{
+        top: 47px;
+        width: 37%;
+        left: -34%;
+    }
 }
 @media only screen and (max-width: 570px){
     #arriba{
         overflow: auto;
+    }
+    nav{
+        top: 50px;
+        width: 29%;
+        left: -27%;
+    }
+    #curriculum{
+        text-align: left;
     }
     p{
         font-size: 8pt;
@@ -213,7 +270,10 @@ marquee{
     header{
         height:7%;
     }
-    
+    nav{
+        width: 40%;
+        left: -37%;
+    }
     #arriba{
         height: 60%;
     }
@@ -278,16 +338,23 @@ marquee{
         top: 0.4%;
         overflow: auto;
     }
+    nav{
+        top: 37px;
+        width: 50%;
+        left: -47%;
+    }
 }
 @media only screen and (max-width: 280px){
     .enlaces{
         font-size: 18pt;
     }
+    nav{
+        top: 47px;
+    }
     .div-imagen{
         width: auto;
         height: 40%;   
     }
-        
     .paginas{
         margin: auto;
         float: none;
