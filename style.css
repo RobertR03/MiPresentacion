@@ -136,6 +136,10 @@ marquee{
         text-align: center;
         font-size: 18pt;
     }
+    .paginas a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
 }
 
 @media only screen and (max-width: 1027px){
