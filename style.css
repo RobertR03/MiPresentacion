@@ -53,6 +53,9 @@ nav:hover{
     text-align: left;
     color: #FFFFFF;
 }
+#curriculum:hover{
+    color: #00ffff;
+}
 #flecha{
     display:inline-block;
     width: 4%;
