@@ -1,104 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
-    <link rel="shortcut icon" href="PNG/ICO/Yo.png" type="image/x-icon">
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="PNG/ICO/Yo.png" type="image/x-icon">
     <title>Robert Romero</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    
 </head>
 <body>
-    <header >
-        <div id="icono-pag"><a href="index.html" class="enlaces">Robert Romero</a></div>
-        <div id="redes" > <a href="https://github.com/RobertR03" target="_blank"> <img src="PNG/GitHub-Mark-Light-32px.png" alt="Ver GitHub" id="gith" onmouseover="i()" onmouseout="i()"> </a> </div>
-    </header>
-    <nav>
-        <a href="documentos/curriculum-robert.pdf" download="curriculum-robert.pdf">
-            <div id="curriculum">
-                Descargar Curriculum
+    <div class="container">
+        <header class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                |
+              <h3 class="float-md-start mb-0 logo">Robert Romero</h3>
+              <nav class="nav nav-masthead justify-content-center float-md-end">
+                
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link" href="documentos/curriculum-robert.pdf" target="_blank" download="curriculum-robert.pdf">Descargar Curriculum</a>
+                <a class="nav-link" href="#contacts">Contacto</a>
+
+              </nav>
             </div>
-        </a>
-        <div id="flecha">
-            >
-        </div>
-    </nav>
-    <div id="contenedor">
-        <div id="arriba">
-            <hr>
-            <div class="div-imagen">
-                <img class="imagen" src="JPG/GraduNew.jpg" alt="Recibido e BTI :)">
-            </div>
+          </header>
+        <article class="card-body mb-5">
+            <p class="myDescrription">
+                <img src="JPG/foto1.jpg" alt="YO" class="myPhoto">
+                Mi nombre es Robert Romero, tengo 19 años. Actualmente sigo la Tecnicatura Superior en Programacion de Aplicaciones 
+                Informáticas.
+                <br>
+                Soy una persona bastante apasionada a la informática en general, me inclino al area del 
+                desarrollo de software debido a que disfruto resolver problemas, aprender y descubrir constantemente cosas nuevas.
+                <br>
+                Soy consciente de mis capacidades, y se que soy bueno utilizando la lógica para resolver problemas, solo necesito oportunidades para demostrarlo.
+                <br>
+                Sueño con vivir de mis conocimientos, y a la vez, crear o contribuir a soluciones que pueda brindar, a través de mi trabajo.
+                <br>
+                Disfruto los retos, porque sé que no son 100% imposibles de lograr.
+            </p>
+
+            <h2>Portafolio - Web Design</h2>
+            <br>
+            <section class="paginas">
+                
+                <div class="carde">
+                    <img src="PNG/paginas/CTF_V2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Programación CTFP-PJ.</h5>
+                    <p class="card-text">Creado para organizar a mi curso. (HTML-CSS-JS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://ctfp-pj.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+
+                <div class="carde">
+                    <img src="PNG/paginas/ReproductorMp3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Reproductor Mp3</h5>
+                    <p class="card-text">Reproductor de música estática funcionando con javascript puro. (HTML-CSS-JS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://reproductormp3.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+
+                <div class="carde">
+                    <img src="PNG/paginas/TSsystem.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">TSsystem</h5>
+                        <p class="card-text">Implementación de carousel con Bootstrap. (HTML-CSS-JS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://tssystem.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+
+                <div class="carde">
+                    <img src="PNG/paginas/parcial-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Responsive page</h5>
+                    <p class="card-text">Implementación de responsive con css. (HTML-CSS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://parcial-frontend-1.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+
+                <div class="carde">
+                    <img src="PNG/paginas/mburucuya.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Cooperativa Mburucuya.</h5>
+                    <p class="card-text">Ejercicio de estructuración absoluta. (HTML-CSS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://mburucuya-rr.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+
+                <div class="carde">
+                    <img src="PNG/paginas/LaCajaTech.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">La Caja Tecnológica.</h5>
+                    <p class="card-text">Primera página web. (HTML-CSS-JS)</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="https://la-caja-tech.netlify.app/index.html" target="_blank" class="btn btn-primary">Quiero verlo 👀</a>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+        
+        <div class="redes">
+            <h3 CLASS="text-center mb-5">CONTÁCTAME</h3>
+            
             <div>
-                <p>Mi nombre es Robert Romero, tengo 19 años. Actualmente sigo la Tecnicatura Superior en Programacion de Aplicaciones 
-                    Informáticas.
-                    <br>
-                    Soy una persona bastante apasionada a la informática en general, me inclino al area del 
-                    desarrollo de software debido a que disfruto resolver problemas, aprender y descubrir constantemente cosas nuevas.
-                    <br>
-                    Soy consciente de mis capacidades, y se que soy bueno utilizando la lógica para resolver problemas, solo necesito oportunidades para demostrarlo.
-                    <br>
-                    Sueño con vivir de mis conocimientos, y a la vez, crear o contribuir a soluciones que pueda brindar, a través de mi trabajo.
-                    <br>
-                    Disfruto los retos, porque sé que no son 100% imposibles de lograr.
-                </p>
+                |
             </div>
+            
+            <h4 class="text-left">GitHub</h4>
         </div>
-        <br><hr><br>
-        <h2>Portafolio - Web Design</h2>
-        <div class="lista">
-            <div class="paginas">
-                <a target="_blank" href="https://tssystem.netlify.app/">
-                    <img src="PNG/paginas/TSsystem.png" alt="TSsystem">
-                    <div class="nombre">
-                        <b>TSsystem.</b><br>Ejercicio de Bootstrap<br>(HTML-CSS(Bootstrap5))
-                    </div>
-                </a>
-            </div>
 
-            <div class="paginas">
-                <a target="_blank" href="https://reproductormp3.netlify.app/">
-                    <img src="PNG/paginas/ReproductorMp3.png" alt="Reproductor Mio">
-                    <div class="nombre">
-                        <b>Reproductor Mio.</b><br>Reproductor Mp3<br>(JS-HTML-CSS)
-                    </div>
-                </a>
-            </div>
+        <div class="text-center pt-2" id="contacts">
+            <footer class="footer">
+                <ul>
+                    <li>
+                        <a href="https://wa.me/595984748295?text=Hola%20Robert!" target="_blank">
+                            <i class="fa-brands fa-whatsapp whatsapp">
+    
+                            </i>
+                        </a>
+                    </li>
 
-            <div class="paginas">
-            <a target="_blank" href="https://parcial-frontend-1.netlify.app/">
-                <img src="PNG/paginas/parcial-1.png" alt="Parcial de Frontend">
-                <div class="nombre">
-                    <b>Primer parcial de frontend.</b><br>Con responsive y navegacion<br> (HTML-CSS)
-                </div>
-            </a>
-            </div>
-            <div class="paginas">
-                <a target="_blank" href="https://ctfp-pj.netlify.app/">
-                    <img src="PNG/paginas/CTF_V2.png" alt="Página de curso">
-                    <div class="nombre">
-                        <b>Programación CTFP-PJ.</b><br>Creado para organizar a mi curso <br> (HTML-CSS-JS)
-                    </div>
-                </a>
-                </div>
-            <div class="paginas">
-                <a target="_blank" href="https://mburucuya-rr.netlify.app/">
-                    <img src="PNG/paginas/mburucuya.png" alt="Ejercicio de CSS">              
-                    <div class="nombre">
-                        <b>Cooperativa Mburucuya.</b><br>Ejercicio de estructuración<br> (HTML-CSS)
-                    </div>
-                </a>
-            </div>
-            <div class="paginas">
-                <a target="_blank" href="https://la-caja-tech.netlify.app/">
-                    <img src="PNG/paginas/LaCajaTech.png" alt="Ejercitario de estudio">
-                    <div class="nombre">
-                        <b>La Caja Tecnológica</b><br>Primera tarea realizada<br> (HTML-CSS-JS)
-                    </div>
-                </a>
-            </div>
+                    <li>
+                        <a href="mailto:rjrch3@gmail.com" target="_blank">
+                            <i class="fa fa-envelope">
+    
+                            </i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-ellipsis-vertical">
+    
+                            </i>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="https://github.com/RobertR03" target="_blank">
+                            <i class="fa-brands fa-github github">
+                                
+                            </i>
+                        </a>
+                    </li>
+
+                </ul>
+            </footer>
         </div>
+             
     </div>
+
+    <!--Change theme-->
+    <div class="fixed-bottom">
+        <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
+            <span class="material-symbols-outlined">
+                light_mode
+            </span>
+        </button>
+        <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </button>
+    </div> 
+
+    <script>
+        css_browser_selector(navigator.userAgent);
+    </script>
 </body>
 </html>

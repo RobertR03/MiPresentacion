@@ -1,366 +1,257 @@
+/*CDN de fuente para redes sociales*/
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+/*Fin CDN de fuente para redes sociales*/
+
 body{
-    background-color: #161b22;
-    align-items: center;
+    background: var(--color-background);
+    color: var(--color-textual);
 }
 
-#icono-pag{
-    width: 59%;
-    height: 100%;
-    text-align:right;
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myDescrription{
+    text-align: justify;
+}
+
+.myPhoto{
     float: left;
-    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--color-active);
+    margin-right: 0.6cm;
+    margin-bottom: -0.1cm;
 }
-h2{
-    text-align: center;
+
+.container{
+    z-index: 9;
 }
-marquee{
-    color: yellow;
+
+/*
+ * Header
+ */
+
+ .logo{
+    color: var(--color-active);
+ }
+
+ .nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: var(--color-primario);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+  }
+  
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: var(--color-active);
+  }
+  
+  .nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+  
+  .nav-masthead .active {
+    color:var(--color-active);
+    border-bottom-color: var(--color-active);
+  }
+
+/*Inicio temas*/
+    :root.light {
+        --color-primario: #000;
+        --color-textual: rgb(24, 23, 23);
+        --color-active:rgb(0, 4, 233);
+        --color-background: #ffffff;
+    }
+    :root.dark {
+        --color-primario: #ffffff;
+        --color-textual: rgb(192, 182, 182);
+        --color-active:rgb(0, 213, 241);
+        --color-background: #000;
+    }
+
+    /*switch de temas*/
+
+        .theme-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid var(--color-primario);
+            color: var(--color-primario);
+            background-color: transparent;
+            transition: 300ms;
+            font-size:small;
+            overflow: hidden;
+            float: right;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .theme-btn:hover{
+            box-shadow: var(--color-primario) 0px 0px 10px, var(--color-primario) inset 0px 0px 15px;
+        }
+
+        .theme-btn:active{
+            box-shadow: var(--color-primario) 0px 0px 30px;
+        }
+        
+        .theme-btn.light {
+            display: none;
+        }
+        
+        .dark .theme-btn.dark {
+            display: none;
+        }
+        
+        .dark .theme-btn.light {
+            display: block;
+        }
+    /*fin de switch de temas*/
+
+/*Fin de temas*/
+
+
+.gecko ul li a::before{
+    top: -20px;
+    padding-bottom: 10px;
 }
-.lista{
-    width: 100%;
-    height: max-content;
-    overflow: hidden;
-    text-align: center;
-}
-.paginas IMG{
-    width: 100%;
+
+.paginas{
     height: auto;
-}
-nav{
-    width: 20%;
-    position: fixed;
-    float: left;
-    z-index: 2;
-    top: 90px;
-    font-size: 14pt;
-    border: 2px solid #cfcfcf;
-    border-radius: 13px;
-    background-color: #161b22;
-    left: -18%;
-    padding:1% 0% 1% 0%;
-    transition: 300ms;
-}
-nav:hover{
-    left: -1%;
-    border: 2px solid #eeee00;
-    padding-left: 2%;
-}
-#curriculum{
-    width: 94%;
-    height: 100%;
-    float: left;
-    display: block;
-    text-align: left;
-    color: #FFFFFF;
-}
-#curriculum:hover{
-    color: #00ffff;
-}
-#flecha{
-    display:inline-block;
-    width: 4%;
-    height: 100%;
-    color: #FFFFFF;
-    text-align: right;
-}
-nav a{
-    text-decoration: none;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-@media only screen and (max-width: 4000px){
-    header{
-        width:99.5%;
-        height: auto;
-        top: 0%;
-        left: 0%;
-        right: 0%;
-        padding-top: 0.5%;
-        padding-bottom:0.5% ;
-        margin: auto;
-        position:fixed;
-        background-color: #161b22;
-        z-index: 2;
-        border-radius: 5px;
-        box-shadow: 0px 1.4px 1.4px seashell;
-    }
-    .enlaces{
-        text-decoration: none;
-        color: #00aaff;
-        text-shadow: 1px 1px 1px #FFFFFF;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 27pt;
-    }
-    #redes{
-        width: 41%;
-        height: 100%;
-        float: left;
-        display: block;
+.carde{
+    max-width: 30%;
+    min-width: 200px;
+
+    height: 370px;
+
+    border: 2px solid var(--color-primario);
+    border-radius: 6%;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    overflow: hidden;
+    transition: 330ms;
+}
+
+.carde .card-body{
+    width: 100%;
+}
+
+.carde:hover{
+    border: none;
+    box-shadow: 3px 3px 10px var(--color-active);
+}
+
+.redes{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    gap: 41px;
+}
+
+/*CSS para redes sociales*/
+
+    .footer {
+        width: max-content;
+        max-width: 1200px;
+        position: relative;
+
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        padding-top: 0.5%;
-    }
-    
-    #gith{
-        border-radius: 12px;
-        transition: 300ms;
-    }
-    
-    #contenedor{
-        width: 97%;
-        height: 99%;
-        padding-top: 4%;
-        padding-right: 1%;
-        padding-left: 1%;
-        background-color: #161b22;
-        left: 0%;
-        right: 0%;
-        margin: auto;
-        position:absolute;
-        border-radius: 7px;
-        color: seashell;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 14pt;
     }
 
-    #arriba{
-        height: 50%;
+    ul {
         width: 100%;
-        float: left;
-        display: block;
-        top: 1%;
-        left: 0%;
-        bottom: 1%;
-        right: 0%;
-        overflow: auto;
-    }
-    p{
-        font-size: 18pt;
-        text-align:left;
-    }
-    .div-imagen{
-        height: 90%;
-        width: auto;
-        float: left;
-        display: block;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        margin-right: 1.5%;
         position: relative;
-        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 8em;/**/
+        padding-left: 0rem;
     }
-    .imagen{
-        height:100%;
-        width: auto;
-    }
-    
-    .paginas{
-        height: max-content;
-        width: 30%;
-        display: inline-block;
-        overflow: hidden;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-        transition: 300ms;
-        margin: auto;
+    ul li {
         position: relative;
-        margin: 1% 1% 1% 1%;
-
+        list-style: none;
+        cursor: pointer;
     }
-    .paginas:hover{
-        border: 1px solid #eeee00;
-    }
-    .nombre{
-        height: auto;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        text-align: center;
-        font-size: 18pt;
-    }
-    .paginas a{
+    ul li a {
         text-decoration: none;
-        color: #FFFFFF;
     }
-}
-
-@media only screen and (max-width: 1027px){
-    #arriba{
-        height: 29%;
-        overflow: auto;
+    ul li a .fa-brands, .fa{   
+        font-size: 6em;
+        color: #222;
     }
-    nav{
-        top: 55px;
-    }
-}
-
-@media only screen and (max-width: 823px){
-    .enlaces{
-        font-size: 23pt;
-    }
-    header{
-        height: auto;
-        padding-top: 0.5%;
-        padding-bottom: 0.5%;
-        right: 0%;
-        left: 0%;
-    }
-    nav{
-        top: 38px;
-        font-size: 10pt;
-    }
-    #contenedor{
-        top: 7%;
-        left: 0%;
-        right: 0%;
-    }
-    #redes{
-        padding-top:0.5%;
-    }
-
-    #arriba{
-        height: 55%;
-        top: 0%;
-        overflow: auto;
-    }
-    .div-imagen{
-        height: 84.5%;
-        width: auto;
-        position: relative;
-        margin-right: 2%;
-    }
-    p{
-        font-size: 10pt;
-        text-align: left;
-    }
-    .nombre{
-        font-size: 9pt;
-    }
-}
-
-@media only screen and (max-width: 770px){
-    #arriba{
-        height: 55%;
-    }
-    .paginas{
-        width: 27%;
-    }
-    nav{
-        top: 47px;
-        width: 37%;
-        left: -34%;
-    }
-}
-@media only screen and (max-width: 570px){
-    #arriba{
-        overflow: auto;
-    }
-    nav{
-        top: 50px;
-        width: 29%;
-        left: -27%;
-    }
-    #curriculum{
-        text-align: left;
-    }
-    p{
-        font-size: 8pt;
-    }
-    .paginas{
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 420px){
-    header{
-        height:7%;
-    }
-    nav{
-        width: 40%;
-        left: -37%;
-    }
-    #arriba{
-        height: 60%;
-    }
-    .div-imagen{
-        height: 42%;
-        width: 35%;
-    }
-    p{
-        font-size: 13pt;
-        font-family: 'Times New Roman', Times, serif;
-        text-align: left;
-    }
-    
-    .paginas{
-        width: 47%;
-    }
-}    
-
-@media only screen and (max-width: 411px){
-    header{
-        height:6.5%;
-    }
-    .div-imagen{
-        height: 47%;
-        width: auto;
-    }
-}
-
-@media only screen and (max-width: 375px){
-    .enlaces{
-        font-size: 20pt;
-    }
-    header{
-        height: 7%;
-    }
-    #contenedor{
-        top: 7%;
-    }
-    #arriba{
-        height: 60%;
-        top: 0.4%;
-        overflow: auto;
-    }
-    .div-imagen{
-        float: left;
-        display: block;
-        height: 40%;
-        width: auto;
+    ul li a::before{
+        font-family: "FontAwesome";
+        position: absolute;
+        left: 0;
+        top: -17.8%;/**/
+        font-size: 6em;
+        height: 0;
         overflow: hidden;
-        margin-bottom: 0%;
-        margin-right: 1.7%;
+        transition: 0.5s ease-in-out;
     }
-    p{
-        font-size: 13pt;
-        font-family: 'Times New Roman', Times, serif;
-        text-align: left;
+
+    ul li:nth-child(1) a::before { /*1 WhastApp*/
+        content: "\f232";
+        color: #25D366;
+        border-bottom: 4px solid #25D366;
     }
-}
-@media only screen and (max-width: 360px){
-    #arriba{
-        height: 75%;
-        top: 0.4%;
-        overflow: auto;
+
+    ul li:nth-child(2) a::before { /*2 mail*/
+        content: "\f0e0";
+        color: var(--color-active);
+        border-bottom: 4px solid var(--color-active);
     }
-    nav{
-        top: 37px;
-        width: 50%;
-        left: -47%;
+
+    ul li:nth-child(4) a::before { /*4 github*/
+        content: "\f09b";
+        color: var(--color-primario);
+        border-bottom: 4px solid var(--color-primario);
     }
-}
-@media only screen and (max-width: 280px){
-    .enlaces{
-        font-size: 18pt;
+
+    ul li:hover a::before {
+        height: 100%;
     }
-    nav{
-        top: 47px;
-    }
-    .div-imagen{
-        width: auto;
-        height: 40%;   
-    }
-    .paginas{
-        margin: auto;
-        float: none;
-        width: 87%;
-    }
-}
+
+    /*
+        Licencia
+
+        Copyright (c) 2022 by Nick (https://codepen.io/OfigenusMaximus/pen/yLKOpqb)
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
+
+        (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, 
+        
+        publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
+        
+        subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE 
+        FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    */
+
+/*Fin de css para redes sociales*/
