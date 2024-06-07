@@ -131,6 +131,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
+    justify-content: center;
 }
 
 .carde{
@@ -146,6 +147,8 @@ body{
     grid-template-rows: 1fr 2fr 1fr;
     overflow: hidden;
     transition: 330ms;
+
+    margin: auto 12px auto 12px;
 }
 
 .carde .card-body{
