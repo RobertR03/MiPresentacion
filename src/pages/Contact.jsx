@@ -61,12 +61,6 @@ const ContactLink = styled.a`
   }
 `;
 
-const ContactForm = styled(motion.form)`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-`;
-
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -274,7 +268,7 @@ const Contact = () => {
           </SocialLinks>
         </ContactInfo>
         
-        <ContactForm 
+        <form 
           name="contact" // required by Netlify
           method="POST" // required by Netlify
           data-netlify="true" // enables Netlify form handling
@@ -282,6 +276,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
         >
           {/* Netlify honeypot and form-name fields */}
           <input type="hidden" name="form-name" value="contact" />
@@ -356,7 +351,7 @@ const Contact = () => {
               {submitMessage}
             </motion.p>
           )}
-        </ContactForm>
+        </form>
       </ContactGrid>
     </ContactContainer>
   );
