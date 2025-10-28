@@ -156,7 +156,7 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -175,7 +175,7 @@ const Contact = () => {
         setSubmitMessage('');
       }, 5000);
     }, 1500);
-  };
+  };*/
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -272,7 +272,7 @@ const Contact = () => {
           name="contact" // required by Netlify
           method="POST" // required by Netlify
           data-netlify="true" // enables Netlify form handling
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
