@@ -275,11 +275,22 @@ const Contact = () => {
         </ContactInfo>
         
         <ContactForm 
+          name="contact" // required by Netlify
+          method="POST" // required by Netlify
+          netlify="true" // enables Netlify form handling
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
+          {/* Netlify honeypot and form-name fields */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p style={{ display: 'none' }}>
+            <label>
+              No llenes esto si eres humano: <input name="bot-field" />
+            </label>
+          </p>
+
           <FormGroup>
             <Label htmlFor="name">Nombre</Label>
             <Input 
