@@ -73,11 +73,13 @@ const SectionTitle = styled(motion.h2)`
   }
 `;
 
-const ProjectsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+const ProjectsFlex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -87,6 +89,8 @@ const ProjectCard = styled(motion.div)`
   transition: transform 0.3s ease;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--color-border);
+  max-width: 350px;
+  height: 450px;
   
   &:hover {
     transform: translateY(-10px);
@@ -95,7 +99,7 @@ const ProjectCard = styled(motion.div)`
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
 `;
 
@@ -114,11 +118,28 @@ const ProjectDescription = styled.p`
   opacity: 0.8;
 `;
 
+const CvLink = styled(Link)`
+  padding: 0.8rem 2rem;
+  background: var(--color-active);
+  color: var(--color-primario);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px var(--color-primario);
+    color: var(--color-bg);
+  }
+`;
+
 const ProjectLink = styled.a`
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--color-active);
-  color: #fff;
+  color: var(--color-primario);
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
@@ -199,18 +220,11 @@ const Home = () => {
             impacto significativo.
           </Description>
           <motion.div variants={itemVariants}>
-            <Link to="/curriculum" style={{ 
-              padding: '0.8rem 2rem',
-              background: 'var(--color-active)',
-              color: '#fff',
-              borderRadius: '30px',
-              textDecoration: 'none',
-              fontWeight: '500',
-              display: 'inline-block',
-              transition: 'all 0.3s ease'
-            }}>
+            {/* animacion de elevacion al hacer hover sobre el boton */}
+            <CvLink to="/curriculum" 
+            >
               Ver mi Curriculum
-            </Link>
+            </CvLink>
           </motion.div>
         </HeroContent>
       </Hero>
@@ -225,7 +239,7 @@ const Home = () => {
           Mis Proyectos
         </SectionTitle>
         
-        <ProjectsGrid>
+        <ProjectsFlex>
           {projectsData.map((project) => (
             <ProjectCard 
               key={project.id}
@@ -243,7 +257,7 @@ const Home = () => {
               </ProjectContent>
             </ProjectCard>
           ))}
-        </ProjectsGrid>
+        </ProjectsFlex>
       </ProjectsSection>
     </HomeContainer>
   );

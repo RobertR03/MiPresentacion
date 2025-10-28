@@ -58,14 +58,15 @@ export const skillsFrameworks = [
   'Filament',
   'Symfony',
   'React',
+  'Flutter',
   'Django',
   'Bootstrap',
 ];
 
 export const languages = [
   { name: 'Español', level: 100 },
-  { name: 'Guaraní', level: 75 },
-  { name: 'Inglés', level: 25 },
+  { name: 'Guaraní', level: 80 },
+  { name: 'Inglés', level: 40 },
 ];
 
 export const interests = [
@@ -89,4 +90,5 @@ export const contact = {
   phone: '+595 976 988 254',
   location: 'Asunción, Paraguay',
   github: 'https://github.com/RobertR03',
+  website: 'https://robertromero.netlify.app',
 };
