@@ -74,11 +74,23 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginBottom: 4,
   },
+  // New styles for side-by-side layout
+  sideBySideContainer: {
+    flexDirection: 'row',
+    marginTop: 12,
+  },
+  sideSection: {
+    flex: 1,
+    marginRight: 16,
+  },
+  sideSectionLast: {
+    flex: 1,
+  },
 });
 
 const CurriculumPDF = () => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size="LEGAL" style={styles.page}>
       <View style={styles.header}>
         <Image style={styles.avatar} src={typeof window !== 'undefined' ? `${window.location.origin}${profile.avatar}` : profile.avatar} />
         <View>
@@ -131,48 +143,53 @@ const CurriculumPDF = () => (
         </View>
       </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Idiomas</Text>
-        <View style={styles.line} />
-        <View>
-          {languages.map((lang, idx) => (
-            <Text key={idx} style={styles.contactRow}>{lang.name}: {lang.level}%</Text>
-          ))}
+      {/* Idiomas e Intereses lado a lado */}
+      <View style={styles.sideBySideContainer}>
+        <View style={styles.sideSection}>
+          <Text style={styles.sectionTitle}>Idiomas</Text>
+          <View style={styles.line} />
+          <View>
+            {languages.map((lang, idx) => (
+              <Text key={idx} style={styles.contactRow}>{lang.name}: {lang.level}%</Text>
+            ))}
+          </View>
+        </View>
+
+        <View style={styles.sideSectionLast}>
+          <Text style={styles.sectionTitle}>Intereses</Text>
+          <View style={styles.line} />
+          <View style={styles.list}>
+            {interests.map((int, idx) => (
+              <View key={idx} style={{ marginRight: 8, marginBottom: 6, alignItems: 'center' }}>
+                <Text style={{ fontSize: 10 }}>{int.name}</Text>
+              </View>
+            ))}
+          </View>
         </View>
       </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Intereses</Text>
-        <View style={styles.line} />
-        <View style={styles.list}>
-          {interests.map((int, idx) => (
-            <View key={idx} style={{ marginRight: 8, marginBottom: 6, alignItems: 'center' }}>
-              <Image style={{ width: 22, height: 22, marginBottom: 2 }} src={typeof window !== 'undefined' ? `${window.location.origin}${int.icon}` : int.icon} />
-              <Text style={{ fontSize: 10 }}>{int.name}</Text>
-            </View>
+      {/* Referencias y Contacto lado a lado */}
+      <View style={styles.sideBySideContainer}>
+        <View style={styles.sideSection}>
+          <Text style={styles.sectionTitle}>Referencias</Text>
+          <View style={styles.line} />
+          <Text style={{ fontSize: 12, marginBottom: 4 }}>Laborales</Text>
+          {references.laborales.map((ref, idx) => (
+            <Text key={idx} style={styles.contactRow}>{ref.name}: {ref.phone}</Text>
+          ))}
+          <Text style={{ fontSize: 12, marginVertical: 4 }}>Personales</Text>
+          {references.personales.map((ref, idx) => (
+            <Text key={idx} style={styles.contactRow}>{ref.name}: {ref.phone}</Text>
           ))}
         </View>
-      </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Referencias</Text>
-        <View style={styles.line} />
-        <Text style={{ fontSize: 12, marginBottom: 4 }}>Laborales</Text>
-        {references.laborales.map((ref, idx) => (
-          <Text key={idx} style={styles.contactRow}>{ref.name}: {ref.phone}</Text>
-        ))}
-        <Text style={{ fontSize: 12, marginVertical: 4 }}>Personales</Text>
-        {references.personales.map((ref, idx) => (
-          <Text key={idx} style={styles.contactRow}>{ref.name}: {ref.phone}</Text>
-        ))}
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Contacto</Text>
-        <View style={styles.line} />
-        <Text style={styles.contactRow}>Email: {contact.email}</Text>
-        <Text style={styles.contactRow}>Tel: {contact.phone}</Text>
-        <Text style={styles.contactRow}>GitHub: {contact.github}</Text>
+        <View style={styles.sideSectionLast}>
+          <Text style={styles.sectionTitle}>Contacto</Text>
+          <View style={styles.line} />
+          <Text style={styles.contactRow}>Email: {contact.email}</Text>
+          <Text style={styles.contactRow}>Tel: {contact.phone}</Text>
+          <Text style={styles.contactRow}>GitHub: {contact.github}</Text>
+        </View>
       </View>
     </Page>
   </Document>

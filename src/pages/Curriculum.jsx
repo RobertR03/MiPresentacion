@@ -187,7 +187,7 @@ const PrintBar = styled.div`
 
 const PrintButton = styled.button`
   background: var(--color-active);
-  color: var(--bg);
+  color: var(--color-bg);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;

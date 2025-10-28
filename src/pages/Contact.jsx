@@ -81,7 +81,7 @@ const Label = styled.label`
 const Input = styled.input`
   padding: 0.8rem;
   border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-primario);
   
@@ -94,7 +94,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   padding: 0.8rem;
   border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-primario);
   min-height: 150px;

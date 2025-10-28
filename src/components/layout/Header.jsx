@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import { motion } from 'framer-motion';
@@ -52,7 +52,13 @@ const NavLink = styled(Link)`
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
-  
+  const location = useLocation();
+  const [currentPath, setCurrentPath] = useState(location.pathname);
+
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location.pathname]);
+
   return (
     <StyledHeader>
       <Logo 
@@ -63,9 +69,9 @@ const Header = () => {
         Robert Romero
       </Logo>
       <Nav>
-        <NavLink to="/" className={location.pathname === '/' ? 'active' : ''}>Inicio</NavLink>
-        <NavLink to="/curriculum" className={location.pathname === '/curriculum' ? 'active' : ''}>Curriculum</NavLink>
-        <NavLink to="/contacto" className={location.pathname === '/contacto' ? 'active' : ''}>Contacto</NavLink>
+        <NavLink to="/" className={currentPath === '/' ? 'active' : ''}>Inicio</NavLink>
+        <NavLink to="/curriculum" className={currentPath === '/curriculum' ? 'active' : ''}>Curriculum</NavLink>
+        <NavLink to="/contacto" className={currentPath === '/contacto' ? 'active' : ''}>Contacto</NavLink>
       </Nav>
     </StyledHeader>
   );

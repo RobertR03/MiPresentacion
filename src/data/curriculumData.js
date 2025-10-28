@@ -1,6 +1,6 @@
 export const profile = {
   name: 'ROBERT ROMERO',
-  title: 'Programador - Full Stack Developer',
+  title: 'Full Stack Developer',
   bio: `Soy un entusiasta con una pasión por el fascinante mundo de la informática. Mi inclinación natural hacia el desarrollo de software se nutre de mi habilidad para abordar desafíos con una mente lógica y resolutiva, transformando problemas en oportunidades de aprendizaje constante.`,
   avatar: '/JPG/foto1.jpg',
 };
@@ -10,7 +10,7 @@ export const experiences = [
     period: '2022 - ACTUALIDAD',
     company: 'Freelancers del Paraguay S.A.',
     description:
-      'Me desempeño como desarrollador web, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando tecnologías como JS, PHP Jquery, Bootstrap.',
+      'Me desempeño como desarrollador full stack, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando de manera contante con tecnologías como JS, PHP, Python, SQL, HTML, CSS.',
   },
   {
     period: '2021 - 2022',
@@ -48,12 +48,14 @@ export const skillsKnowledge = [
   'PYTHON',
   'JAVA',
   'MySql',
+  'PostgreSQL',
   'Oracle',
 ];
 
 export const skillsFrameworks = [
   'JQuery',
   'Laravel',
+  'Filament',
   'Symfony',
   'React',
   'Django',
@@ -67,8 +69,8 @@ export const languages = [
 ];
 
 export const interests = [
-  { name: 'Arte', icon: '/SVG/brush.svg' },
-  { name: 'Tecnología', icon: '/SVG/laptop.svg' },
+  { name: 'Arte', icon: 'public/SVG/brush.svg' },
+  { name: 'Tecnología', icon: 'public/SVG/laptop.svg' },
 ];
 
 export const references = {
