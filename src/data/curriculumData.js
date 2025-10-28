@@ -69,8 +69,8 @@ export const languages = [
 ];
 
 export const interests = [
-  { name: 'Arte', icon: 'public/SVG/brush.svg' },
-  { name: 'Tecnología', icon: 'public/SVG/laptop.svg' },
+  { name: 'Arte', icon: 'SVG/brush.svg' },
+  { name: 'Tecnología', icon: 'SVG/laptop.svg' },
 ];
 
 export const references = {
