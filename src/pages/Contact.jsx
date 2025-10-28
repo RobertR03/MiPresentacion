@@ -277,7 +277,7 @@ const Contact = () => {
         <ContactForm 
           name="contact" // required by Netlify
           method="POST" // required by Netlify
-          netlify="true" // enables Netlify form handling
+          data-netlify="true" // enables Netlify form handling
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
