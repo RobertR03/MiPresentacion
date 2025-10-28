@@ -36,6 +36,28 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const SpecialGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProfileSection = styled.div`
@@ -158,10 +180,11 @@ const ContactLink = styled.a`
   }
 `;
 
-const InterestsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+const InterestsFlex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 `;
 
 const InterestItem = styled(motion.div)`
@@ -267,7 +290,7 @@ const Curriculum = () => {
         ))}
       </Section>
       
-      <Grid>
+      <FlexContainer>
         <Section initial="hidden" animate="visible" variants={containerVariants}>
           <SectionTitle as={motion.h2} variants={itemVariants}>Conocimientos</SectionTitle>
           <SkillsContainer>
@@ -299,7 +322,7 @@ const Curriculum = () => {
             ))}
           </SkillsContainer>
         </Section>
-      </Grid>
+      </FlexContainer>
       
       <Section initial="hidden" animate="visible" variants={containerVariants}>
         <SectionTitle as={motion.h2} variants={itemVariants}>Idiomas</SectionTitle>
@@ -316,48 +339,50 @@ const Curriculum = () => {
         ))}
       </Section>
       
-      <Grid>
+      <SpecialGrid as={motion.div} initial="hidden" animate="visible" variants={containerVariants}>
         <Section initial="hidden" animate="visible" variants={containerVariants}>
           <SectionTitle as={motion.h2} variants={itemVariants}>Intereses</SectionTitle>
-          <InterestsGrid>
+          <InterestsFlex>
             {interests.map((int, idx) => (
               <InterestItem key={idx} variants={itemVariants}>
                 <InterestIcon src={int.icon} />
                 <span>{int.name}</span>
               </InterestItem>
             ))}
-          </InterestsGrid>
+          </InterestsFlex>
         </Section>
         
         <Section initial="hidden" animate="visible" variants={containerVariants}>
           <SectionTitle as={motion.h2} variants={itemVariants}>Referencias</SectionTitle>
           
-          <div as={motion.div} variants={itemVariants}>
-            <h4>Laborales</h4>
-            {references.laborales.map((ref, idx) => (
-              <ContactItem key={idx}>
-                <span>{ref.name}:</span>
-                <ContactLink href={`tel:${ref.phone.replace(/\s/g,'')}`}>{ref.phone}</ContactLink>
-              </ContactItem>
-            ))}
-          </div>
-          
-          <div as={motion.div} variants={itemVariants} style={{ marginTop: '1rem' }}>
-            <h4>Personales</h4>
-            {references.personales.map((ref, idx) => (
-              <ContactItem key={idx}>
-                <span>{ref.name}:</span>
-                <ContactLink href={`tel:${ref.phone.replace(/\s/g,'')}`}>{ref.phone}</ContactLink>
-              </ContactItem>
-            ))}
-          </div>
+          <FlexContainer>
+            <div as={motion.div} variants={itemVariants}>
+              <h4>Laborales</h4>
+              {references.laborales.map((ref, idx) => (
+                <ContactItem key={idx}>
+                  <span>{ref.name}:</span>
+                  <ContactLink href={`tel:${ref.phone.replace(/\s/g,'')}`}>{ref.phone}</ContactLink>
+                </ContactItem>
+              ))}
+            </div>
+            
+            <div as={motion.div} variants={itemVariants} style={{ marginTop: '1rem' }}>
+              <h4>Personales</h4>
+              {references.personales.map((ref, idx) => (
+                <ContactItem key={idx}>
+                  <span>{ref.name}:</span>
+                  <ContactLink href={`tel:${ref.phone.replace(/\s/g,'')}`}>{ref.phone}</ContactLink>
+                </ContactItem>
+              ))}
+            </div>
+          </FlexContainer>
         </Section>
-      </Grid>
+      </SpecialGrid>
       
       <Section initial="hidden" animate="visible" variants={containerVariants}>
         <SectionTitle as={motion.h2} variants={itemVariants}>Contacto</SectionTitle>
         
-        <Grid>
+        <FlexContainer>
           <ContactItem as={motion.div} variants={itemVariants}>
             <i className="fa fa-phone" style={{ color: 'var(--color-active)' }}></i>
             <ContactLink href="tel:+595976988254">+595 976 988 254</ContactLink>
@@ -377,7 +402,7 @@ const Curriculum = () => {
             <i className="fa fa-globe" style={{ color: 'var(--color-active)' }}></i>
             <ContactLink href="https://robertromero.netlify.app" target="_blank">robertromero.netlify.app</ContactLink>
           </ContactItem>
-        </Grid>
+        </FlexContainer>
       </Section>
     </CurriculumContainer>
   );
