@@ -3,60 +3,42 @@
 export const projects = [
   {
     id: 1,
-    title: "Aplicación de Gestión de Tareas",
-    description: "Aplicación web para gestionar tareas y proyectos con funcionalidades de arrastrar y soltar, filtros y estadísticas.",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/assets/projects/project1.jpg",
-    url: "https://github.com/RobertR03",
+    title: "Reproductor Mp3",
+    description: "Reproductor de música estática funcionando con javascript puro. (HTML-CSS-JS)",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "/PNG/paginas/ReproductorMp3.png",
+    url: "https://reproductormp3.netlify.app/index.html",
     featured: true
-  },
-  {
-    id: 2,
-    title: "E-commerce de Productos Tecnológicos",
-    description: "Plataforma de comercio electrónico con carrito de compras, pasarela de pagos y sistema de gestión de inventario.",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Stripe"],
-    image: "/assets/projects/project2.jpg",
-    url: "https://github.com/RobertR03",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Dashboard Analítico",
-    description: "Panel de control con visualizaciones de datos en tiempo real para análisis de métricas empresariales.",
-    technologies: ["Angular", "D3.js", "Firebase", "TypeScript"],
-    image: "/assets/projects/project3.jpg",
-    url: "https://github.com/RobertR03",
-    featured: false
   }
 ];
 
 export const workExperience = [
   {
     id: 1,
-    position: "Desarrollador Full Stack Senior",
-    company: "TechSolutions Inc.",
+    position: "Desarrollador Full Stack",
+    company: "Freelancers del Paraguay S.A.",
     location: "Asunción, Paraguay",
-    startDate: "2020-01",
+    startDate: "2022-01",
     endDate: "Presente",
-    description: "Desarrollo y mantenimiento de aplicaciones web empresariales utilizando React, Node.js y MongoDB. Implementación de arquitecturas escalables y optimización de rendimiento."
+    description: "Me desempeño como desarrollador full stack, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando de manera contante con tecnologías como JS, PHP, Python, SQL, HTML, CSS."
   },
   {
     id: 2,
-    position: "Desarrollador Front-end",
-    company: "WebCreative Studio",
+    position: "Auxiliar de depósito",
+    company: "Farmanova S.A",
     location: "Asunción, Paraguay",
-    startDate: "2018-03",
-    endDate: "2019-12",
-    description: "Diseño e implementación de interfaces de usuario responsivas y accesibles utilizando HTML5, CSS3, JavaScript y frameworks modernos como React y Vue.js."
+    startDate: "2021-01",
+    endDate: "2022-12",
+    description: "Me desempeñé como auxiliar de depósito utilizando el sistema WIS para la recepción, registro, almacenado, y preparación de los productos."
   },
   {
     id: 3,
-    position: "Desarrollador Web Junior",
-    company: "Digital Solutions",
+    position: "Ayudante del encargado de informática",
+    company: "Engineering S.A.",
     location: "Asunción, Paraguay",
-    startDate: "2016-06",
-    endDate: "2018-02",
-    description: "Desarrollo de sitios web corporativos y tiendas online utilizando WordPress, PHP y MySQL. Colaboración en proyectos de diseño UX/UI."
+    startDate: "2019-01",
+    endDate: "2020-12",
+    description: "Realicé una pasantía laboral en la empresa, trabajando con; Mantenimiento y montaje de Pc's, mantenimiento preventivo de impresoras láser, operación de cámaras, elaboración de cables UTP, creación de carpetas compartidas en dominio, configuración de correos en el dominio con Outlook, control de escritorio remoto e instalación de Sistemas Operativos."
   }
 ];
 
@@ -78,29 +60,29 @@ export const skills = [
 export const education = [
   {
     id: 1,
-    degree: "Ingeniería en Informática",
-    institution: "Universidad Nacional de Asunción",
+    degree: "Técnico Superior en Programación de Aplicaciones Informáticas",
+    institution: "Centro Tecnológico de Formación Profesional Paraguay - Japón (SNPP)",
     location: "Asunción, Paraguay",
-    startYear: 2014,
-    endYear: 2019
+    startYear: 2021,
+    endYear: 2023
   },
   {
     id: 2,
-    degree: "Máster en Desarrollo Web",
-    institution: "Universidad Tecnológica",
+    degree: "Bachillerato Técnico en Informática",
+    institution: "Centro Regional de Educación Saturio Ríos",
     location: "Asunción, Paraguay",
-    startYear: 2020,
-    endYear: 2022
+    startYear: 2018,
+    endYear: 2020
   }
 ];
 
 export const contactInfo = {
   email: "rjrch3@gmail.com",
   phone: "+595 976 988 254",
-  location: "Asunción, Paraguay",
+  location: "Capiatá, Paraguay",
+  website: "https://robertromero.netlify.app/contacto",
   socialMedia: {
     github: "https://github.com/RobertR03",
-    linkedin: "https://linkedin.com/in/robertrodriguez",
-    twitter: "https://twitter.com/robertrodriguez"
+    website: "https://robertromero.netlify.app",
   }
 };

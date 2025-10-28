@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { contactInfo as contact } from '../data/mockData.js';
 
 const ContactContainer = styled.div`
   max-width: 800px;
@@ -213,15 +214,6 @@ const Contact = () => {
       
       <ContactGrid>
         <ContactInfo as={motion.div} initial="hidden" animate="visible" variants={containerVariants}>
-          <ContactItem variants={itemVariants}>
-            <IconWrapper>
-              <i className="fa fa-map-marker-alt"></i>
-            </IconWrapper>
-            <div>
-              <h3>Ubicación</h3>
-              <p>Paraguay</p>
-            </div>
-          </ContactItem>
           
           <ContactItem variants={itemVariants}>
             <IconWrapper>
@@ -229,7 +221,7 @@ const Contact = () => {
             </IconWrapper>
             <div>
               <h3>Email</h3>
-              <ContactLink href="mailto:rjrch3@gmail.com">rjrch3@gmail.com</ContactLink>
+              <ContactLink href={`mailto:${contact.email}`}>{contact.email}</ContactLink>
             </div>
           </ContactItem>
           
@@ -239,13 +231,13 @@ const Contact = () => {
             </IconWrapper>
             <div>
               <h3>Teléfono</h3>
-              <ContactLink href="tel:+595976988254">+595 976 988 254</ContactLink>
+              <ContactLink href={`tel:${contact.phone}`}>{contact.phone}</ContactLink>
             </div>
           </ContactItem>
           
           <SocialLinks>
             <SocialLink 
-              href="https://wa.me/595976988254?text=Hola%20Robert!" 
+              href={`https://wa.me/${contact.phone.replace(/[^\d]/g, '')}?text=Hola%20Robert!`} 
               target="_blank"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
@@ -254,7 +246,7 @@ const Contact = () => {
             </SocialLink>
             
             <SocialLink 
-              href="mailto:rjrch3@gmail.com" 
+              href={`mailto:${contact.email}`} 
               target="_blank"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
@@ -263,12 +255,21 @@ const Contact = () => {
             </SocialLink>
             
             <SocialLink 
-              href="https://github.com/RobertR03" 
+              href={`https://github.com/${contact.github}`} 
               target="_blank"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
               <i className="fa-brands fa-github"></i>
+            </SocialLink>
+
+            <SocialLink 
+              href={`${contact.socialMedia.website}`} 
+              target="_blank"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <i className="fa fa-globe"></i>
             </SocialLink>
           </SocialLinks>
         </ContactInfo>

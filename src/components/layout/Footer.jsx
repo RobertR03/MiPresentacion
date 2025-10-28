@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { contactInfo as contact } from '../../data/mockData.js';
 
 const StyledFooter = styled.footer`
   padding: 2rem 0;
@@ -70,7 +71,7 @@ const Footer = () => {
       <SocialLinks>
         <SocialItem>
           <SocialLink 
-            href="https://wa.me/595976988254?text=Hola%20Robert!" 
+            href={`https://wa.me/${contact.phone.replace(/\s/g,'')}?text=Hola%20Robert!`} 
             target="_blank" 
             className="whatsapp"
             as={motion.a}
@@ -82,7 +83,7 @@ const Footer = () => {
         
         <SocialItem>
           <SocialLink 
-            href="mailto:rjrch3@gmail.com" 
+            href={`mailto:${contact.email}`} 
             target="_blank" 
             className="email"
             as={motion.a}
@@ -94,7 +95,7 @@ const Footer = () => {
         
         <SocialItem>
           <SocialLink 
-            href="https://github.com/RobertR03" 
+            href={contact.socialMedia.github} 
             target="_blank" 
             className="github"
             as={motion.a}
@@ -103,6 +104,19 @@ const Footer = () => {
             <i className="fa-brands fa-github"></i>
           </SocialLink>
         </SocialItem>
+
+        <SocialItem>
+          <SocialLink 
+            href={contact.website} 
+            target="_blank" 
+            className="website"
+            as={motion.a}
+            whileHover={{ scale: 1.1 }}
+          >
+            <i className="fa fa-globe"></i>
+          </SocialLink>
+        </SocialItem>
+
       </SocialLinks>
       
       <Copyright>© {new Date().getFullYear()} Robert Romero. Todos los derechos reservados.</Copyright>

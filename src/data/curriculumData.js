@@ -90,5 +90,5 @@ export const contact = {
   phone: '+595 976 988 254',
   location: 'Asunción, Paraguay',
   github: 'https://github.com/RobertR03',
-  website: 'https://robertromero.netlify.app',
+  website: 'https://robertromero.netlify.app/contacto',
 };

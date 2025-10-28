@@ -189,6 +189,7 @@ const CurriculumPDF = () => (
           <Text style={styles.contactRow}>Email: {contact.email}</Text>
           <Text style={styles.contactRow}>Tel: {contact.phone}</Text>
           <Text style={styles.contactRow}>GitHub: {contact.github}</Text>
+          <Text style={styles.contactRow}>Website: {contact.website}</Text>
         </View>
       </View>
     </Page>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import CurriculumPDF from '../pdf/CurriculumPDF.jsx';
-import { profile, experiences, education as eduData, skillsKnowledge, skillsFrameworks, languages, interests, references } from '../data/curriculumData.js';
+import { profile, experiences, education as eduData, skillsKnowledge, skillsFrameworks, languages, interests, references, contact } from '../data/curriculumData.js';
 
 const CurriculumContainer = styled.div`
   max-width: 1000px;
@@ -385,22 +385,22 @@ const Curriculum = () => {
         <FlexContainer>
           <ContactItem as={motion.div} variants={itemVariants}>
             <i className="fa fa-phone" style={{ color: 'var(--color-active)' }}></i>
-            <ContactLink href="tel:+595976988254">+595 976 988 254</ContactLink>
+            <ContactLink href={`tel:${contact.phone.replace(/\s/g,'')}`}>{contact.phone}</ContactLink>
           </ContactItem>
           
           <ContactItem as={motion.div} variants={itemVariants}>
             <i className="fa fa-envelope" style={{ color: 'var(--color-active)' }}></i>
-            <ContactLink href="mailto:rjrch3@gmail.com">rjrch3@gmail.com</ContactLink>
+            <ContactLink href={`mailto:${contact.email}`}>{contact.email}</ContactLink>
           </ContactItem>
           
           <ContactItem as={motion.div} variants={itemVariants}>
             <i className="fa-brands fa-github" style={{ color: 'var(--color-active)' }}></i>
-            <ContactLink href="https://github.com/RobertR03" target="_blank">RobertR03</ContactLink>
+            <ContactLink href={contact.github} target="_blank">{contact.github.split('/').pop()}</ContactLink>
           </ContactItem>
           
           <ContactItem as={motion.div} variants={itemVariants}>
             <i className="fa fa-globe" style={{ color: 'var(--color-active)' }}></i>
-            <ContactLink href="https://robertromero.netlify.app" target="_blank">robertromero.netlify.app</ContactLink>
+            <ContactLink href={contact.website} target="_blank">Website</ContactLink>
           </ContactItem>
         </FlexContainer>
       </Section>
