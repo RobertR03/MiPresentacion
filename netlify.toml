@@ -1,0 +1,60 @@
+[build]
+  # Comando de build
+  command = "npm run build"
+  
+  # Directorio de salida (Vite genera en dist/)
+  publish = "dist"
+  
+  # Variables de entorno para el build
+  [build.environment]
+    NODE_VERSION = "22"
+
+[context.production]
+  command = "npm run build"
+  
+[context.deploy-preview]
+  command = "npm run build"
+
+# Redirects para SPA (Single Page Application)
+# Todas las rutas que no sean archivos estáticos van a index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de seguridad
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers para archivos estáticos (cache)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para archivos de medios
+[[headers]]
+  for = "/JPG/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    
+[[headers]]
+  for = "/PNG/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    
+[[headers]]
+  for = "/SVG/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Headers para documentos
+[[headers]]
+  for = "/documentos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
