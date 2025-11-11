@@ -50,6 +50,7 @@ export const skillsKnowledge = [
   'MySql',
   'PostgreSQL',
   'Oracle',
+  'Firebase',
 ];
 
 export const skillsFrameworks = [

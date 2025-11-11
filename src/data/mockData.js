@@ -54,7 +54,8 @@ export const skills = [
   { id: 9, name: "Git", level: 85, category: "Herramientas" },
   { id: 10, name: "Docker", level: 70, category: "Herramientas" },
   { id: 11, name: "AWS", level: 65, category: "Herramientas" },
-  { id: 12, name: "UI/UX Design", level: 75, category: "Diseño" }
+  { id: 12, name: "UI/UX Design", level: 75, category: "Diseño" },
+  { id: 13, name: "Firebase", level: 80, category: "Backend" }
 ];
 
 export const education = [
