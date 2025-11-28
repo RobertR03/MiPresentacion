@@ -7,7 +7,13 @@ export const profile = {
 
 export const experiences = [
   {
-    period: '2022 - ACTUALIDAD',
+    period: 'Noviembre 2025 - ACTUALIDAD',
+    company: 'CLT',
+    description:
+      'Me desempeño como desarrollador backend, actualmente trabajando como consultor externo en un banco nacional.',
+  },
+  {
+    period: 'Diciembre 2022 - Noviembre 2025',
     company: 'Freelancers del Paraguay S.A.',
     description:
       'Me desempeño como desarrollador full stack, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando de manera contante con tecnologías como JS, PHP, Python, SQL, HTML, CSS.',
