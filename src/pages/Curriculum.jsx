@@ -129,6 +129,7 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content:center;
 `;
 
 const Skill = styled(motion.span)`
