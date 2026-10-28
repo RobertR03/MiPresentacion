@@ -10,13 +10,13 @@ export const experiences = [
     period: 'Noviembre 2025 - ACTUALIDAD',
     company: 'CLT',
     description:
-      'Me desempeño como desarrollador backend, actualmente trabajando como consultor externo en un banco nacional.',
+      'Me desempeño como desarrollador backend, actualmente trabajando como consultor externo para el banco continental. Trabajo con Pipelines y Releases en Azure DevOps, Kubernetes, Aplicaciones de escritorio y APIs .Net',
   },
   {
     period: 'Diciembre 2022 - Noviembre 2025',
     company: 'Freelancers del Paraguay S.A.',
     description:
-      'Me desempeño como desarrollador full stack, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando de manera contante con tecnologías como JS, PHP, Python, SQL, HTML, CSS.',
+      'Me desempeñé como desarrollador full stack, trabajando en distintos proyectos para realizar nuevos sistemas, correcciones de errores y mejoras, tanto en backend como en frontend, utilizando de manera contante con tecnologías como JS, PHP, Python, SQL, HTML, CSS.',
   },
   {
     period: '2021 - 2022',
@@ -53,10 +53,12 @@ export const skillsKnowledge = [
   'PHP',
   'PYTHON',
   'JAVA',
+  'C#',
   'MySql',
   'PostgreSQL',
   'Oracle',
   'Firebase',
+  'Git',
 ];
 
 export const skillsFrameworks = [
@@ -67,6 +69,7 @@ export const skillsFrameworks = [
   'React',
   'Flutter',
   'Django',
+  '.Net (DotNet)',
   'Bootstrap',
 ];
 
