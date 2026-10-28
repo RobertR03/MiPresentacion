@@ -28,7 +28,7 @@ export const experiences = [
     period: '2019 - 2020',
     company: 'Engineering S.A. - Ayudante del encargado de informática.',
     description:
-      "Realicé una pasantía laboral en la empresa, trabajando con; Mantenimiento y montaje de Pc's, mantenimiento preventivo de impresoras láser, y soporte técnivo en general.",
+      "Realicé una pasantía laboral en la empresa, trabajando con; Mantenimiento y montaje de Pc's, mantenimiento preventivo de impresoras láser, y soporte técnico en general.",
   },
 ];
 
